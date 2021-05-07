@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Desafio 2</title>
+	<style type="text/css">
+	.calculos{
+	 	background: #c7502c;
+	 	color: #f0e8e6;
+	 	margin: 5px;
+	 	padding: 10px;
+	 	font-size: 20px;
+	}
+	#calculosuno{
+	 	background: green;
+	 	color: #f0e8e6;
+	 	margin: 5px;
+	 	padding: 10px;
+	 	font-size: 20px;
+	}
+	#calculosdos{
+	 	background: #03F2FF;
+	 	color: black;
+	 	margin: 5px;
+	 	padding: 10px;
+	 	font-size: 20px;
+	}
+	#calculostres{
+	 	background: brown;
+	 	color: #f0e8e6;
+	 	margin: 5px;
+	 	padding: 10px;
+	 	font-size: 20px;
+	}
+	h1{
+	 	text-align: center;
+	 	color: #ed3f13;
+	}
+	#h1{
+	 	text-align: center;
+	 	color: #ed3f13;
+	 	font: bold;
+	 	font-size: 30px;
+	}
+	.center {
+  		display: block;
+  		margin-left: auto;
+  		margin-right: auto;
+  		width: 25%;
+	}
+	</style>
+</head>
+<body>
+	<header>
+		<h1>Javascript</h1>
+		<h1>DESAFIO 2</h1>
+	</header>
+	<article>
+		<script type="text/javascript">
+			var opcionuno=prompt("Te gustaria resolver una Ecuacion de Segunda Grado?. (Inserta 1). (Presiona Aceptar sin escribir nada para ir a la siguiente opcion)")
+			var opciondos=prompt("O te gustaria saber la traduccion de tu dia y mes favorito?.     (Inserta 2). ")
+			if (opcionuno==1) {
+				document.write("<div id=h1>Ejercicio.<br>Ecuacion Cuadratica<br></div>")
+				var a=prompt("Introducir numero (a): ")
+				var b=prompt("Introducir numero (b): ")
+				var c=prompt("Introducir numero (c): ")
+				var d=Math.pow(b,2)-(4*a*c)
+				if (d>0) {
+					var duno=-b+Math.sqrt(d)
+					var dunouno=duno/(2*a)
+					var ddos=-b-Math.sqrt(d)
+					var ddosdos=ddos/(2*a)
+					document.write("<div id=calculosuno> La ecuacion tiene dos raices: <br>Raiz uno: "+dunouno+"<br>Raiz dos: "+ddosdos+"</div>")
+				}else if (d==0){
+					var duno=-b+Math.sqrt(d)
+					var dunouno=duno/(2*a)
+					var ddos=-b-Math.sqrt(d)
+					var ddosdos=ddos/(2*a)
+					if (dunouno==ddosdos) {
+						document.write("<div id=calculosdos> La ecuacion tiene una raiz: <br>Raiz: "+ddosdos+"</div>")
+					}
+				}else{ 
+					document.write("<div id=calculostres> La ecuacion no tiene raices reales<br></div>")
+				}
+			} else if (opciondos==2){
+				document.write("<div id=h1>Ejercicio.<br>Dias y meses de la semana<br></div>")
+				var dia=prompt("Ingrese tu dia en numero (Del 1 al 7): ");
+				var mes=prompt("Ingrese tu mes en numero (Del 1 al 12): ");
+				switch(dia){
+					case '1':
+						dia="Lunes"
+						day="Monday"
+						giorno="Lunedi"
+						hi="月曜日 (getsuyōbi)"
+						tag="Montag"
+						jour="Lundi"
+						break;
+					case '2':
+						dia="Martes"
+						day="Tuesday"
+						giorno="Martedì"
+						hi="火曜日 (kayōbi)"
+						tag="Dienstag"
+						jour="Mardi"
+						break;
+					case '3':
+						dia="Miercoles"
+						day="Wednesday"
+						giorno="Mercoledì"
+						hi="水曜日 (suiyōbi)"
+						tag="Mittwoch"
+						jour="Mercredi"
+						break;
+					case '4':
+						dia="Jueves"
+						day="Thrusday"
+						giorno="Giovedi"
+						hi="木曜日 (mokuyōb)"
+						tag="Donnerstag"
+						jour="Jeudi"
+						break;
+					case '5':
+						dia="Viernes"
+						day="Friday"
+						giorno="Venerdì"
+						hi="金曜日 (kin'yōbi)"
+						tag="Freitag"
+						jour="Vendredi"
+						break;
+					case '6':
+						dia="Sabado"
+						day="Saturday"
+						giorno="Sabato"
+						hi="土曜日 (doyōbi)"
+						tag="Samstag"
+						jour="Samedi"
+						break;
+					case '7':
+						dia="Domingo"
+						day="Sunday"
+						giorno="Domenica"
+						hi="日曜日 (nichiyōbi)"
+						tag="Sonntag"
+						jour="Dimanche"
+						break;
+					default:
+						document.write("<div class=calculos>Vuelva a intentarlo!!!!<div>");
+					}
+				switch(mes){
+					case '1':
+						mes="Enero"
+						month="January"
+						mois="Janvier"
+						monat="der Januar"
+						mese="Gennaio"
+						tsuki="一月 (ichigatsu)"
+						break;
+					case '2':
+						mes="Febrero"
+						month="February"
+						mois="Février"
+						monat="der Februar"
+						mese="Febbraio"
+						tsuki="二月 (nigatsu)"	
+						break;
+					case '3':
+						mes="Marzo"
+						month="March"
+						mois="Mars"
+						monat="der März"
+						mese="Marzo"
+						tsuki="三月 (sangatsu)"
+						break;
+					case '4':
+						mes="Abril"
+						month="April"
+						mois="April"
+						monat="der April"
+						mese="Aprile"
+						tsuki="四月 (shigatsu)"
+						break;
+					case '5':
+						mes="Mayo"
+						month="May"
+						mois="Mai"
+						monat="der Mai"
+						mese="Maggio"
+						tsuki="五月 (gogatsu)"
+						break;
+					case '6':
+						mes="Junio"
+						month="June"
+						mois="Juin"
+						monat="der Juni"
+						mese="Giugno"
+						tsuki="六月 (rokugatsu)"
+						break;
+					case '7':
+						mes="Julio"
+						month="July"
+						mois="Juillet"
+						monat="der Juli"
+						mese="Luglio"
+						tsuki="七月 (shichigatsu)"
+						break;
+					case '8':
+						mes="Agosto"
+						month="August"
+						mois="Aôut"
+						monat="der August"
+						mese="Agosto"
+						tsuki="八月 (hachigatsu)"
+						break;
+					case '9':
+						mes="Septiembre"
+						month="September"
+						mois="Septembre"
+						monat="der September"
+						mese="Settembre"
+						tsuki="九月 (kugatsu)"
+						break;
+					case '10':
+						mes="Octubre"
+						month="October"
+						mois="Octobre"
+						monat="der Oktober"
+						mese="Ottobre"
+						tsuki="十月 (jūgatsu)"
+						break;
+					case '11':
+						mes="Noviembre"
+						month="November"
+						mois="Novembre"
+						monat="der November"
+						mese="Novembre"
+						tsuki="十一月 (jūichigatsu)"
+						break;
+					case '12':
+						mes="Diciembre"
+						month="December"
+						mois="Décembre"
+						monat="der Dezember"
+						mese="Dicembre"
+						tsuki="十二月 (jūnigatsu)"
+						break;
+					default:
+						document.write("<div class=calculos>Vuelva a intentarlo!!!!<div>");
+					}
+					document.write("<div id=calculosdos> Tu dia: "+dia+"<br> Traduccion: <br>1) En Ingles: "+day+"<br>2) En Frances: "+jour+"<br>3) En Aleman: "+tag+"<br>4) En Italiano: "+giorno+"<br>5) En Japones: "+hi+"<br></div>");
+					document.write("<div id=calculostres> Tu mes: "+mes+"<br> Traduccion: <br>1) En Ingles: "+month+"<br>2) En Frances: "+mois+"<br>3) En Aleman: "+monat+"<br>4) En Italiano: "+mese+"<br>5) En Japones: "+tsuki+"<br></div>");
+			}else{
+				document.write("<div class=calculos>Te equivocaste de opcion!!!!<br></div>")
+			}
+		</script>
+	</article>
+</body>
+</html>
